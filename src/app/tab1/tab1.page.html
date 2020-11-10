@@ -1,17 +1,26 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Coordenadas
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="contenedor">
+        <h2>Esta App no almacena datos personales :)</h2>
+    </div>
+    <div class="contenedor">
+        <ng-template #iniciar>
+            <h3>Ingrese cantidad máxima de mediciones</h3>
+            <input type="text" [(ngModel)]="medicionesMax">
+            <button (click)="validacionServicio()">Iniciar Servicio</button>
+        </ng-template>
+        <ng-template #terminar>
+            <button (click)="validacionServicio()">Terminar Servicio</button>
+        </ng-template>
+        <div *ngIf="!inicio;then iniciar;else terminar"></div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+    </div>
 </ion-content>

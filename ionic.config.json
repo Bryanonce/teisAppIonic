@@ -1,5 +1,7 @@
 {
   "name": "tesis",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

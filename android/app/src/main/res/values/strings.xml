@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ionicMyApp</string>
+    <string name="title_activity_main">ionicMyApp</string>
+    <string name="package_name">com.tesis.app</string>
+    <string name="custom_url_scheme">com.tesis.app</string>
+</resources>

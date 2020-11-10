@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ServicioService } from '../service/servicio.service';
+import { DataModule } from '../module/data.module';
+import { UsuariosModule } from '../module/usuarios.module';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  datos:any[] = [];
+  constructor(public _servicioService:ServicioService) {}
 
-  constructor() {}
-
+  obntenerData(){
+    this._servicioService.getApi().subscribe((resp:DataModule)=>{
+      resp.usuarios.forEach((elem:UsuariosModule)=>{
+        this.datos.push(`latitud: ${elem.lat}, longitud: ${elem.long}`)
+      })
+    });
+  }
 }

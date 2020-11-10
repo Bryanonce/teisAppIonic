@@ -1,17 +1,51 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Mapa mapbox
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <body>
+        <div class="contenedor">
+            <div class="anio">
+                <label>Año Inicial</label>
+                <input type="text" placeholder="Ingrese Año Inicio" [(ngModel)]="consulta.anioIni" value="2020"><br><br>
+                <label>Año Final</label>
+                <input type="text" placeholder="Ingrese Año Fin" [(ngModel)]="consulta.anioFin" value="2040"><br>
+            </div>
+            <div class="mes">
+                <label>Mes Inicial</label>
+                <input type="text" placeholder="Ingrese Mes Inicio" [(ngModel)]="consulta.mesIni" value="0"><br><br>
+                <label>Mes Final</label>
+                <input type="text" placeholder="Ingrese Mes Fin" [(ngModel)]="consulta.mesFin" value="11"><br>
+            </div>
+            <div class="dia">
+                <label>Día Inicial</label>
+                <input type="text" placeholder="Ingrese Día Inicio" [(ngModel)]="consulta.diaIni" value="0"><br><br>
+                <label>Día Final</label>
+                <input type="text" placeholder="Ingrese Día Fin" [(ngModel)]="consulta.diaFin" value="11"><br>
+            </div>
+            <div class="hora">
+                <label>Hora Inicial</label>
+                <input type="text" placeholder="Ingrese Hora Inicio" [(ngModel)]="consulta.horaIni" value="1"><br><br>
+                <label>Hora Final</label>
+                <input type="text" placeholder="Ingrese Hora Fin" [(ngModel)]="consulta.horaFin" value="23"><br>
+            </div>
+            <div class="minu">
+                <label>Hora Inicial</label>
+                <input type="text" placeholder="Ingrese Hora Inicio" [(ngModel)]="consulta.minutoIni" value="1"><br><br>
+                <label>Hora Final</label>
+                <input type="text" placeholder="Ingrese Hora Fin" [(ngModel)]="consulta.minutoFin" value="59"><br>
+            </div>
+            <button (click)="cargarMapa()">Enviar</button>
+        </div>
+        <div class="contmapa">
+            <div id="mapa-mapbox"></div>
+        </div>
+
+    </body>
+
 </ion-content>
