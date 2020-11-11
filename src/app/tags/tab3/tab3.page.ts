@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ServicioService } from '../service/servicio.service';
+import { ServicioService } from '../../service/servicio.service';
 import * as mapboxgl from 'mapbox-gl';
-import { Consulta } from '../module/consulta.module';
-import { environment } from '../../environments/environment';
+import { Consulta } from '../../module/consulta.module';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-tab3',

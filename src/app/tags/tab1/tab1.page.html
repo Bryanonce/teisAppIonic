@@ -18,9 +18,11 @@
         </ng-template>
         <ng-template #terminar>
             <button (click)="validacionServicio()">Terminar Servicio</button>
+            <div class="contenedor-texto">
+                <textarea id="textoarea">{{ultimaMedicion|json}}</textarea>
+            </div>
         </ng-template>
         <div *ngIf="!inicio;then iniciar;else terminar"></div>
-
-
     </div>
+
 </ion-content>

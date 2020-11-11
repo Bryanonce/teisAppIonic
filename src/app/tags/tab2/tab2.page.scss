@@ -1,0 +1,38 @@
+button {
+    width: 80%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.contenedor {
+    text-align: center;
+}
+
+p {
+    font-size: 50px;
+}
+
+.alerta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    p {
+        font-size: 40px;
+    }
+}
+
+.rojo {
+    background: rgb(255, 160, 160);
+    color: #fff;
+}
+
+.amarill0 {
+    background: rgb(255, 255, 172);
+    color: #fff;
+}
+
+.azul {
+    background: rgb(165, 165, 245);
+    color: rgb(255, 235, 235);
+}

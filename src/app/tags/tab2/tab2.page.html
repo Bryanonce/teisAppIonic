@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Metodo Get
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <div class="contenedor">
+        <button (click)="obtenerPeligro()">Calcular Zona de peligro Peligro</button>
+
+        <div class="alerta rojo" *ngIf="rojo">
+            <p>Peligro tenga cuidado</p>
+        </div>
+        <div class="alerta amarillo" *ngIf="amarillo">
+            <p>Peligro medio</p>
+        </div>
+        <div class="alerta azul" *ngIf="azul">
+            <p>Peligro bajo</p>
+        </div>
+
+
+
+    </div>
+
+</ion-content>

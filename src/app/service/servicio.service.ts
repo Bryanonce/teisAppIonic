@@ -15,14 +15,12 @@ export class ServicioService {
   }
   getApi(){
     return this.http.get('https://tesisbryanespol.herokuapp.com/datos');
-    //return this.dataPura;
   }
   getDatosJson(url:string,condiciones:Consulta){
     let argumento = `?anioIni=${condiciones.anioIni}&anioFin=${condiciones.anioFin}&mesIni=${condiciones.mesIni}&mesFin=${condiciones.mesFin}&diaIni=${condiciones.diaIni}&diaFin=${condiciones.diaFin}&horaIni=${condiciones.horaIni}&horaFin=${condiciones.horaFin}&minutoIni=${condiciones.minutoIni}&minutoFin=${condiciones.minutoFin}`;
-    //console.log(argumento);
   	return this.http.get(url+argumento)
   }
   postDatosJson(url:string,form:MetodoPost){
-    return this.http.post(url,form)
+    return this.http.post(url,form) 
   }
 }
